@@ -4,7 +4,7 @@
 }
 
 .hero-bg {
-    background: linear-gradient(135deg, #e7ad87 0%, #e9b394 50%);
+    background: linear-gradient(135deg, #e7ad87 50%, #e9b394 50%);
     position: relative;
     overflow: hidden;
 }
