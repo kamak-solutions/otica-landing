@@ -1,105 +1,111 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    * {
-        font-family: 'Inter', sans-serif;
-    }
-    
-    .hero-bg {
-       background: linear-gradient(to right, #b85716 0%, #c96f3e 40%, #e9b394 100%);
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .hero-bg::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('show-room.png') center/cover;
-        opacity: 0.3;
-        z-index: 1;
-    }
-    
-    .hero-content {
-        position: relative;
-        z-index: 2;
-    }
-    
-    .parallax-bg {
-        background: linear-gradient(45deg, #1e3a8a, #7e99c5);
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
-    .glass-effect {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .hover-lift {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .hover-lift:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    }
-    
-    .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-    .btn-primary {
-        background: linear-gradient(135deg, #934410, #70340e);
-        transition: all 0.3s ease;
-    }
-    
-    .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(112, 52, 12, 0.3);
-    }
-    
-    .text-gradient {
-        background: linear-gradient(135deg, #934410, #70340e);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-    .fa-eye{
-        color: #934410;
-    }
-    
-    .animate-float {
-        animation: float 6s ease-in-out infinite;
-    }
-    
-    @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
-    }
-    
-    .mobile-menu {
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-    }
-    
-    .mobile-menu.open {
-        transform: translateX(0);
-    }
-    
-    @media (max-width: 768px) {
-        .hero-bg {
-            min-height: 100vh;
-        }
-    }
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* REMOVE SCROLL GLOBAL */
+  font-family: Arial, sans-serif;
+}
+
+/* MENU FIXO */
+.menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 16px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+}
+
+.menu a.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+/* VIEWPORT */
+.viewport {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* IMPEDE SCROLL */
+}
+
+/* CONTAINER HORIZONTAL */
+.sections {
+  display: flex;
+  width: 400vw;
+  height: 100vh;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* CADA SEÇÃO */
+.panel {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+/* CORES APENAS PARA VISUALIZAÇÃO */
+#home { background: #f5f5f5; }
+#produtos { background: #e0e0e0; }
+#blog { background: #ccc; }
+#contato { background: #bdbdbd; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu {
+    top: auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+    .arrow {
+    bottom: auto;     /* REMOVE POSIÇÃO INFERIOR */
+    top: 16px;         /* MOVE PARA O TOPO */
+    font-size: 44px;
+  }
+  
+}
+.panel {
+  position: relative;
+}
+
+/* SETA BASE */
+.arrow {
+  position: absolute;
+  bottom: 32px;
+  font-size: 60px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s, transform 0.6s;
+}
+
+.arrow:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* POSIÇÕES */
+.arrow-prev {
+  left: 32px;
+}
+
+.arrow-next {
+  right: 32px;
+}
