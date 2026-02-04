@@ -1,0 +1,199 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* REMOVE SCROLL GLOBAL */
+  font-family: Arial, sans-serif;
+}
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  width: 100%;
+  padding-right: 50px;
+}
+
+.navbar .logo img {
+  width: 200px;
+}
+/* MENU FIXO */
+.menu {
+  display: flex;
+}
+.logo-media > img {
+  position: fixed;
+  top: 20px;
+  left: 15px;
+  z-index: 2000;
+  display: none;
+  width: 100px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.menu a.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+/* VIEWPORT */
+.viewport {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* IMPEDE SCROLL */
+}
+
+/* CONTAINER HORIZONTAL */
+.sections {
+  display: flex;
+  width: 400vw;
+  height: 100vh;
+  transition:
+    transform 1.8s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 1.2s ease-out;
+  will-change: transform;
+}
+
+/* CADA SEÇÃO */
+.panel {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+/* CORES APENAS PARA VISUALIZAÇÃO */
+#home {
+  background: #f5f5f5;
+}
+#produtos {
+  background: #e0e0e0;
+}
+#blog {
+  background: #ccc;
+}
+#contato {
+  background: #bdbdbd;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  /* NAVBAR APENAS PARA O MENU (EMBAIXO) */
+  .navbar {
+    position: fixed;
+    bottom: 20px;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    z-index: 900;
+  }
+  .logo-media > img {
+    display: block;
+  }
+
+  /* SETAS NO TOPO */
+  .arrow {
+    bottom: auto;
+    top: 18px;
+    font-size: 1px;
+    opacity: 0.1;
+  }
+  .logo {
+    display: none;
+  }
+
+  .arrow-prev {
+    left: 16px;
+  }
+
+  .arrow-next {
+    right: 16px;
+  }
+
+  /* BACKGROUND HOME */
+ 
+  #home,
+  #produtos,
+  #blog,
+  #contato {
+    background-position: center;
+  }
+
+  /* LINKS DO MENU */
+  .menu a {
+    color: whitesmoke;
+  }
+}
+
+.panel {
+  position: relative;
+}
+
+/* SETA BASE */
+.arrow {
+  position: absolute;
+  bottom: 32px;
+  font-size: 100px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f5f5f5;
+  opacity: 0.6;
+  transition:
+    opacity 0.3s,
+    transform 0.6s;
+}
+
+.arrow:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* POSIÇÕES */
+.arrow-prev {
+  left: 32px;
+}
+
+.arrow-next {
+  right: 32px;
+}
+
+#home {
+  background-image: url(../img/model.png);
+  background-size: cover;
+}
+#produtos {
+  background-image: url(../img/blue-man.png);
+  background-size: cover;
+}
+#blog {
+  background-image: url(../img/mulb.avif);
+  background-size: cover;
+}
+#contato {
+  background-image: url(../img/mulp.png);
+  background-size: cover;
+}

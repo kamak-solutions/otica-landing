@@ -4,40 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Slide UX</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-
+<header class="navbar">
   <nav class="menu">
     <a href="#home" data-index="0" class="active">Home</a>
     <a href="#produtos" data-index="1">Produtos</a>
     <a href="#blog" data-index="2">Blog</a>
     <a href="#contato" data-index="3">Contato</a>
   </nav>
-
+  <div class="logo">
+    <img src="./img/logo20245.png" alt="">
+  </div>
+</header>
+<div class="logo-media">
+  <img src="./img/logo20245.png" alt="" srcset="">
+</div>
   <main class="viewport">
     <div class="sections">
 
       <section id="home" class="panel">
-        Home
+    
        
         <button class="arrow arrow-next" data-go="next">→</button>
       </section>
 
       <section id="produtos" class="panel">
-        Produtos
+  
         <button class="arrow arrow-prev" data-go="prev">←</button>
         <button class="arrow arrow-next" data-go="next">→</button>
       </section>
 
       <section id="blog" class="panel">
-        Blog
+
         <button class="arrow arrow-prev" data-go="prev">←</button>
         <button class="arrow arrow-next" data-go="next">→</button>
       </section>
 
       <section id="contato" class="panel">
-        Contato
+   
         <button class="arrow arrow-prev" data-go="prev">←</button>
        
       </section>
@@ -45,6 +51,6 @@
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
