@@ -1,0 +1,207 @@
+/* ===========================
+   BANNER LGPD - COOKIES
+   =========================== */
+
+/* Overlay que bloqueia interação */
+.lgpd-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    backdrop-filter: blur(3px);
+}
+
+.lgpd-overlay.active {
+    display: block;
+}
+
+/* Banner de cookies no rodapé */
+.lgpd-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    color: white;
+    padding: 25px 30px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    animation: slideUp 0.5s ease;
+}
+
+.lgpd-banner.active {
+    display: block;
+}
+
+.lgpd-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.lgpd-texto {
+    flex: 1;
+}
+
+.lgpd-texto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #ff5722;
+}
+
+.lgpd-texto p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.lgpd-texto a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.lgpd-texto a:hover {
+    color: #ff9800;
+    text-decoration: underline;
+}
+
+.lgpd-acoes {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.lgpd-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.lgpd-btn-aceitar {
+    background: #ff5722;
+    color: white;
+}
+
+.lgpd-btn-aceitar:hover {
+    background: #e64a19;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.4);
+}
+
+.lgpd-btn-rejeitar {
+    background: transparent;
+    color: #ddd;
+    border: 2px solid #666;
+}
+
+.lgpd-btn-rejeitar:hover {
+    background: #333;
+    border-color: #999;
+    color: white;
+}
+
+/* Ícone de cookie */
+.lgpd-icone {
+    font-size: 2rem;
+    margin-right: 15px;
+    display: none;
+}
+
+/* Animação de entrada */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===========================
+   RESPONSIVO - MOBILE
+   =========================== */
+@media (max-width: 768px) {
+    .lgpd-banner {
+        padding: 20px 15px;
+    }
+
+    .lgpd-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .lgpd-texto h3 {
+        font-size: 1.1rem;
+    }
+
+    .lgpd-texto p {
+        font-size: 0.9rem;
+    }
+
+    .lgpd-acoes {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .lgpd-btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+
+    .lgpd-icone {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .lgpd-banner {
+        padding: 15px 10px;
+    }
+
+    .lgpd-texto h3 {
+        font-size: 1rem;
+    }
+
+    .lgpd-texto p {
+        font-size: 0.85rem;
+    }
+
+    .lgpd-btn {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajuste do copyright quando o banner LGPD estiver ativo */
+.lgpd-banner.active ~ .viewport .copyright {
+    bottom: 90px;
+}
+
+@media (max-width: 768px) {
+    .lgpd-banner.active ~ .viewport .copyright {
+        bottom: 180px;
+    }
+}

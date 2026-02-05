@@ -1,0 +1,28 @@
+# robots.txt para Ótica ShowRoom
+# Otimizado para SEO
+
+User-agent: *
+Allow: /
+
+# Bloquear diretórios administrativos (se houver)
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /*.json$
+
+# Permitir crawlers acessarem CSS e JS (importante para Google)
+Allow: /css/
+Allow: /js/
+Allow: /img/
+
+# Sitemap
+Sitemap: https://oticashowroom.shop/sitemap.xml
+
+# Configurações para bots específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /img/
+
+# Taxa de crawling (opcional)
+Crawl-delay: 1

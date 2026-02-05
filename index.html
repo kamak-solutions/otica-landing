@@ -1,70 +1,396 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Open Graph -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Ótica ShowToom" />
-<meta property="og:description" content="Muito além de óculos. Uma experiência visual." />
-<meta property="og:url" content="https://oticashowroom.shop" />
-<meta property="og:image" content="https://oticashowroom.shop/img/og.png" />
-<meta property="og:site_name" content="Nome do Site" />
-<meta property="og:locale" content="pt_BR" />
-
-<!-- Tamanho da imagem (opcional, mas recomendado) -->
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-
-  <title>Otica ShowRoom</title>
-  <link rel="shortcut icon" href="./img/showroom-logo-white-1.gif" type="image/x-icon">
-  <link rel="stylesheet" href="./css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- ===========================
+         META TAGS SEO - NOVO
+         =========================== -->
+    
+    <!-- Meta Description - CRÍTICO para SEO -->
+    <meta name="description" content="Ótica ShowRoom em São Paulo: óculos de grau e sol com até 40% OFF. Lentes premium, armações exclusivas e atendimento especializado. Visite nossa loja ou compre online!" />
+    
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="ótica são paulo, óculos de grau, óculos de sol, lentes premium, armações, ótica centro sp, óculos baratos, lentes zeiss, ray ban" />
+    
+    <!-- Canonical URL - Evita duplicação -->
+    <link rel="canonical" href="https://oticashowroom.shop/" />
+    
+    <!-- Meta Author -->
+    <meta name="author" content="Ótica ShowRoom" />
+    
+    <!-- Meta Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#667eea" />
+    
+    <!-- Geo Tags para SEO Local -->
+    <meta name="geo.region" content="BR-SP" />
+    <meta name="geo.placename" content="São Paulo" />
+    <meta name="geo.position" content="-23.550520;-46.633308" />
+    <meta name="ICBM" content="-23.550520, -46.633308" />
+    
+    <!-- Open Graph (Facebook/WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ótica ShowRoom - Óculos Premium com até 40% OFF" />
+    <meta property="og:description" content="Muito além de óculos. Uma experiência visual completa em São Paulo." />
+    <meta property="og:url" content="https://oticashowroom.shop" />
+    <meta property="og:image" content="https://oticashowroom.shop/img/og.png" />
+    <meta property="og:site_name" content="Ótica ShowRoom" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ótica ShowRoom - Óculos Premium com até 40% OFF" />
+    <meta name="twitter:description" content="Muito além de óculos. Uma experiência visual completa." />
+    <meta name="twitter:image" content="https://oticashowroom.shop/img/og.png" />
+    
+    <title>Ótica ShowRoom - Óculos de Grau e Sol em São Paulo | Até 40% OFF</title>
+    
+    <!-- ===========================
+         PERFORMANCE OPTIMIZATION
+         =========================== -->
+    
+    <!-- Preconnect para recursos externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//wa.me">
+    <link rel="dns-prefetch" href="//api.whatsapp.com">
+    
+    <!-- Preload crítico -->
+    <link rel="preload" href="./css/style.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/lgpd.css" />
+    <link rel="shortcut icon" href="./img/showroom-logo-white-1.gif" type="image/x-icon" />
+    
+    <!-- ===========================
+         SCHEMA.ORG / JSON-LD
+         =========================== -->
+    
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://oticashowroom.shop/#business",
+      "name": "Ótica ShowRoom",
+      "image": "https://oticashowroom.shop/img/logo20245.png",
+      "url": "https://oticashowroom.shop",
+      "telephone": "+551196320885",
+      "email": "contato@oticashowroom.shop",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua das Ópticas, 123",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01234-567",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.550520",
+        "longitude": "-46.633308"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127"
+      }
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ótica ShowRoom",
+      "url": "https://oticashowroom.shop",
+      "logo": "https://oticashowroom.shop/img/logo20245.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-11-96320-8855",
+        "contactType": "Customer Service",
+        "areaServed": "BR",
+        "availableLanguage": "Portuguese"
+      }
+    }
+    </script>
+    
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Ótica ShowRoom",
+      "url": "https://oticashowroom.shop"
+    }
+    </script>
+    
 </head>
 <body>
-<header class="navbar">
-  <nav class="menu">
-    <a href="#home" data-index="0" class="active">Home</a>
-    <a href="#produtos" data-index="1">Produtos</a>
-    <a href="#blog" data-index="2">Blog</a>
-    <a href="#contato" data-index="3">Contato</a>
-  </nav>
-  <div class="logo">
-    <img src="./img/logo20245.png" alt="">
-  </div>
-</header>
-<div class="logo-media">
-  <img src="./img/logo20245.png" alt="" srcset="">
-</div>
-  <main class="viewport">
-    <div class="sections">
-
-      <section id="home" class="panel">
+    <header class="navbar">
+        <nav class="menu">
+            <a href="#home" data-index="0" class="active">Home</a>
+            <a href="#produtos" data-index="1">Produtos</a>
+            <a href="#lentes" data-index="2">Lentes</a>
+            <a href="#blog" data-index="3">Blog</a>
+            <a href="#contato" data-index="4">Contato</a>
+            <a href="https://wa.me/5511963208855?text=Olá! Vim do site da Ótica ShowRoom e gostaria de fazer um orçamento."
+               target="_blank"
+               rel="noopener noreferrer"
+               class="menu-whatsapp"
+               aria-label="Faça um orçamento pelo WhatsApp">
+                💬 Faça um Orçamento
+            </a>
+        </nav>
+        <div class="logo">
+            <img src="./img/logo20245.png" 
+                 loading="lazy" 
+                 alt="Ótica ShowRoom São Paulo - Loja de Óculos Premium" 
+                 title="Ótica ShowRoom - Armações e Lentes de Qualidade" />
+        </div>
+    </header>
     
-       
-        <button class="arrow arrow-next" data-go="next">→</button>
-      </section>
-
-      <section id="produtos" class="panel">
-  
-        <button class="arrow arrow-prev" data-go="prev">←</button>
-        <button class="arrow arrow-next" data-go="next">→</button>
-      </section>
-
-      <section id="blog" class="panel">
-
-        <button class="arrow arrow-prev" data-go="prev">←</button>
-        <button class="arrow arrow-next" data-go="next">→</button>
-      </section>
-
-      <section id="contato" class="panel">
-   
-        <button class="arrow arrow-prev" data-go="prev">←</button>
-       
-      </section>
-
+    <div class="logo-media">
+        <img src="./img/logo20245.png" 
+             loading="lazy" 
+             alt="Ótica ShowRoom - Logo" 
+             title="Ótica ShowRoom São Paulo" />
     </div>
-  </main>
-
-  <script src="./js/script.js"></script>
+    
+    <!-- MODAL DE DETALHES DO PRODUTO -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-produto" id="modalProduto">
+        <div class="modal-header">
+            <h2 id="modalTitulo">Título do Produto</h2>
+            <button class="modal-close" id="modalClose">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-conteudo">
+                <!-- Galeria -->
+                <div class="modal-galeria">
+                    <div class="modal-imagem-principal">
+                        <img id="modalImagemPrincipal" 
+                             loading="lazy" 
+                             src="./img/oculos1.jpg" 
+                             alt="Óculos de grau - Modelo em destaque">
+                    </div>
+                    <div class="modal-miniaturas" id="modalMiniaturas">
+                        <!-- Miniaturas serão inseridas dinamicamente -->
+                    </div>
+                </div>
+                <!-- Informações -->
+                <div class="modal-info">
+                    <h2 id="modalNome">Nome do Produto</h2>
+                    <div class="produto-rating">
+                        <span class="estrelas" id="modalRating">★★★★☆</span>
+                    </div>
+                    <p class="modal-descricao" id="modalDescricao">Descrição completa do produto será exibida aqui.</p>
+                    <div class="modal-caracteristicas">
+                        <h3>Características</h3>
+                        <ul id="modalCaracteristicas">
+                            <!-- Características serão inseridas dinamicamente -->
+                        </ul>
+                    </div>
+                    <div class="modal-precos">
+                        <span class="preco-antigo" id="modalPrecoAntigo">de R$ 121,00</span>
+                        <span class="preco-atual" id="modalPrecoAtual">R$ 100,00</span>
+                        <span class="desconto-badge" id="modalDesconto">-17%</span>
+                    </div>
+                    <div class="modal-acoes">
+                        <a href="#" class="btn-comprar" id="modalBtnComprar">
+                            <span>📱</span> comprar no whatsapp
+                        </a>
+                        <button class="btn-favoritar" id="modalBtnFavoritar">♥</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main class="viewport">
+        <div class="sections">
+            <!-- HOME -->
+            <section id="home" class="panel">
+                <div class="content-box home-banner">
+                    <!-- Título principal - Destaque -->
+                    <h1 class="banner-title">LOOK 2026</h1>
+                    
+                    <!-- Headline de conversão -->
+                    <h2 class="banner-headline">Sua Nova Identidade Visual</h2>
+                    
+                    <!-- Descrição persuasiva -->
+                    <p class="banner-description">Descubra os modelos que vão transformar seu estilo. Óculos premium com até 40% de desconto.</p>
+                    
+                    <!-- CTAs lado a lado -->
+                    <div class="banner-ctas">
+                        <a href="#produtos" class="btn-banner btn-primary-banner">ver loja</a>
+                        <a href="https://wa.me/5511963208855?text=Quero conhecer a coleção LOOK 2026!"
+                           target="_blank"
+                           class="btn-banner btn-secondary-banner">comprar</a>
+                    </div>
+                    
+                    <!-- Indicadores de slide (bolinhas) -->
+                    <div class="banner-indicators">
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                    </div>
+                    
+                    <!-- Setas de navegação laterais -->
+                    <button class="banner-arrow banner-arrow-left" aria-label="Slide anterior">◀</button>
+                    <button class="banner-arrow banner-arrow-right" aria-label="Próximo slide">▶</button>
+                </div>
+                <div class="copyright">kamak-solutions © 2026</div>
+            </section>
+            
+            <!-- PRODUTOS - Gerado Automaticamente pelo JavaScript -->
+            <section id="produtos" class="panel">
+                <div class="content-box">
+                    <h2>Nossos Produtos</h2>
+                    <p>Explore nossa coleção exclusiva de armações e lentes de alta qualidade.</p>
+                    <!-- Os cards serão inseridos aqui automaticamente pelo JavaScript -->
+                </div>
+                <button class="arrow arrow-prev" data-go="prev">←</button>
+                <button class="arrow arrow-next" data-go="next">→</button>
+                <div class="copyright">kamak-solutions © 2026</div>
+            </section>
+            
+            <!-- LENTES - Gerado Automaticamente pelo JavaScript -->
+            <section id="lentes" class="panel">
+                <div class="content-box">
+                    <h2>Lentes Premium</h2>
+                    <p>Explore nossa coleção exclusiva de lentes de alta tecnologia e qualidade.</p>
+                    <!-- Os cards serão inseridos aqui automaticamente pelo JavaScript -->
+                </div>
+                <button class="arrow arrow-prev" data-go="prev">←</button>
+                <button class="arrow arrow-next" data-go="next">→</button>
+                <div class="copyright">kamak-solutions © 2026</div>
+            </section>
+            
+            <!-- BLOG -->
+            <section id="blog" class="panel">
+                <div class="content-box">
+                    <h2>Blog</h2>
+                    <p>Dicas de estilo, cuidados com a visão e novidades do mundo da ótica.</p>
+                    
+                    <!-- Artigo 1 -->
+                    <article class="card">
+                        <img src="./img/blog1.jpg" 
+                             loading="lazy" 
+                             alt="Pessoa usando óculos de sol com proteção UV400" 
+                             title="Importância da Proteção UV nos Óculos" />
+                        <h3>Por que a proteção UV é essencial?</h3>
+                        <p>Descubra como os raios ultravioleta afetam seus olhos e por que você deve protegê-los diariamente.</p>
+                    </article>
+                    
+                    <!-- Artigo 2 -->
+                    <article class="card">
+                        <img src="./img/blog2.jpg" 
+                             loading="lazy" 
+                             alt="Óculos modernos sobre fundo colorido - Tendências 2026" 
+                             title="Tendências de Óculos para 2026" />
+                        <h3>Tendências de óculos para 2026</h3>
+                        <p>Conheça os estilos que estão dominando as passarelas e as ruas este ano.</p>
+                    </article>
+                    
+                    <!-- Artigo 3 -->
+                    <article class="card">
+                        <img src="./img/blog3.jpg" 
+                             loading="lazy" 
+                             alt="Limpeza de lentes de óculos com pano de microfibra" 
+                             title="Como Limpar Lentes Corretamente" />
+                        <h3>Como limpar suas lentes corretamente</h3>
+                        <p>Dicas práticas para manter seus óculos sempre limpos e sem arranhões.</p>
+                    </article>
+                    
+                    <!-- Artigo 4 -->
+                    <article class="card">
+                        <img src="./img/blog4.jpg" 
+                             loading="lazy" 
+                             alt="Diferentes formatos de armações de óculos" 
+                             title="Guia para Escolher Armação Ideal" />
+                        <h3>Como escolher a armação ideal</h3>
+                        <p>Guia completo para encontrar o modelo perfeito para o formato do seu rosto.</p>
+                    </article>
+                </div>
+                <button class="arrow arrow-prev" data-go="prev">←</button>
+                <button class="arrow arrow-next" data-go="next">→</button>
+                <div class="copyright">kamak-solutions © 2026</div>
+            </section>
+            
+            <!-- CONTATO -->
+            <section id="contato" class="panel">
+                <div class="content-box">
+                    <h2>Entre em Contato</h2>
+                    <p>Visite nossa loja ou entre em contato conosco. Estamos aqui para ajudar!</p>
+                    
+                    <div class="item">
+                        <h3>📍 Endereço</h3>
+                        <p>
+                            Rua das Ópticas, 123<br />
+                            Centro - São Paulo/SP<br />
+                            CEP: 01234-567
+                        </p>
+                    </div>
+                    
+                    <div class="item">
+                        <h3>📞 Telefone</h3>
+                        <p>
+                            (11) 1234-5678<br />
+                            (11) 96320-8855
+                        </p>
+                    </div>
+                    
+                    <div class="item">
+                        <h3>✉️ E-mail</h3>
+                        <p>
+                            contato@oticashowroom.shop<br />
+                            vendas@oticashowroom.shop
+                        </p>
+                    </div>
+                    
+                    <div class="item">
+                        <h3>🕐 Horário</h3>
+                        <p>
+                            Segunda a Sexta: 9h às 19h<br />
+                            Sábado: 9h às 14h<br />
+                            Domingo: Fechado
+                        </p>
+                    </div>
+                </div>
+                <button class="arrow arrow-prev" data-go="prev">←</button>
+                <div class="copyright">kamak-solutions © 2026</div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Scripts -->
+    <script type="module" src="./js/script.js"></script>
+    <script src="./js/lgpd.js"></script>
 </body>
 </html>
